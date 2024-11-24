@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title></title>
+</head>
+
+<body>
+  <div class="main w-full min-h-screen bg-zinc-900 text-white">
+    <a class="inline-block text-blue-500 m-3 underline" href="/">Go Back to Home</a>
+    <div class="form p-10">
+      <form action="/edit" method="post">
+        <p class="text-white pt-5">Previous Title</p>
+        <input name="previous" class="p-3 outline-none bg-zinc-800 w-full rounded-md text-zinc-600" type="text" readonly placeholder="Previous Title" value="<%= filename %>">
+        <p class="text-white pt-5">New Title</p>
+        <input name="new" class="p-3 outline-none bg-zinc-800 w-full rounded-md text-white" type="text" placeholder="New Title">
+        <p class="text-white pt-5">Previous description</p>
+        <textarea class="p-3 resize-none outline-none bg-zinc-800 w-full rounded-md text-zinc-600" name="prevdes" placeholder="The description goes here" value readonly><%= filedata %></textarea>
+        <p class="text-white pt-5">New description</p>
+        <textarea class="p-3 resize-none outline-none bg-zinc-800 w-full rounded-md text-white" name="newdes" placeholder="New Description" value></textarea>
+        <input class="block text-white bg-yellow-600 rounded-md p-3 mt-3" type="submit">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
